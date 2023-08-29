@@ -1,12 +1,12 @@
- inputBox = document.getElementById("inputText");
- addBtn = document.getElementById("addBtn");
- todoList = document.getElementById("todoList");
- todoCount = document.getElementById("todoCount");
+let inputBox = document.getElementById("inputText");
+let addBtn = document.getElementById("addBtn");
+let todoList = document.getElementById("todoList");
+let todoCount = document.getElementById("todoCount");
 
 count = 0;
 todoCount.innerHTML = count;
 
- addtodo = () => {
+let addtodo = () => {
   inputText = inputBox.value;
   if (inputText.length <= 0) {
     alert("Write Something");
@@ -29,7 +29,7 @@ todoCount.innerHTML = count;
   }
 };
 
- updateTodo = (e) => {
+let updateTodo = (e) => {
   if (e.target.innerHTML === "Remove") {
     todoList.removeChild(e.target.parentElement);
     todoCount.innerHTML = count - 1;
